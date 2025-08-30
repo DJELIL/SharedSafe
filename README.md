@@ -1,4 +1,3 @@
-# SharedSafe
 SharedSafe 💼🔐
 
 SharedSafe is a simple yet powerful finance management application designed to help families and micro-enterprises manage their savings, expenses, and scheduled transfers in a secure and organized way.
