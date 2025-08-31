@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2025/08/30 23:21:06.780,=C:\Users\J\Documents\Embarcadero\Studio\Projets\Unit1.pas</Transaction>
+    <Transaction>2025/08/30 23:21:29.317,C:\SharedSafe\SOURCE\Unit1.pas=C:\Users\J\Documents\Embarcadero\Studio\Projets\Unit1.pas</Transaction>
+    <Transaction>2025/08/30 23:21:29.317,C:\SharedSafe\SOURCE\Unit1.dfm=C:\Users\J\Documents\Embarcadero\Studio\Projets\Unit1.dfm</Transaction>
+    <Transaction>2025/08/30 23:21:33.138,C:\SharedSafe\SOURCE\Project1.dproj=C:\Users\J\Documents\Embarcadero\Studio\Projets\Project1.dproj</Transaction>
+    <Transaction>2025/08/30 23:21:54.107,C:\SharedSafe\SOURCE\SharedSafe.dproj=C:\SharedSafe\SOURCE\Project1.dproj</Transaction>
+    <Transaction>2025/08/30 23:22:40.951,C:\SharedSafe\SOURCE\UMain.pas=C:\SharedSafe\SOURCE\Unit1.pas</Transaction>
+    <Transaction>2025/08/30 23:22:40.951,C:\SharedSafe\SOURCE\UMain.dfm=C:\SharedSafe\SOURCE\Unit1.dfm</Transaction>
+    <Transaction>2025/08/30 23:29:45.578,=C:\SharedSafe\SOURCE\Unit1.pas</Transaction>
+    <Transaction>2025/08/30 23:35:27.660,C:\SharedSafe\SOURCE\U_Comptes.pas=C:\SharedSafe\SOURCE\Unit1.pas</Transaction>
+    <Transaction>2025/08/30 23:35:27.660,C:\SharedSafe\SOURCE\U_Comptes.dfm=C:\SharedSafe\SOURCE\Unit1.dfm</Transaction>
+    <Transaction>2025/08/30 23:42:08.880,=C:\SharedSafe\SOURCE\Unit1.pas</Transaction>
+    <Transaction>2025/08/30 23:42:55.860,C:\SharedSafe\SOURCE\UDM.dfm=C:\SharedSafe\SOURCE\Unit1.dfm</Transaction>
+    <Transaction>2025/08/30 23:42:55.860,C:\SharedSafe\SOURCE\UDM.pas=C:\SharedSafe\SOURCE\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
