@@ -24,7 +24,9 @@ uses
   dxSkinVisualStudio2013Light, dxSkinVS2010, dxSkinWhiteprint, dxSkinWXI,
   dxSkinXmas2008Blue, dxCore, dxRibbonCustomizationForm, cxTextEdit,
   cxContainer, cxEdit, dxSkinsForm, dxStatusBar, dxRibbonStatusBar, cxLabel,
-  dxGallery, dxGalleryControl, dxRibbonBackstageViewGalleryControl;
+  dxGallery, dxGalleryControl, dxRibbonBackstageViewGalleryControl, UAuthentification, UDM, UCoffre,
+  dxLayoutContainer, dxLayoutControl, dxLayoutcxEditAdapters, Vcl.VirtualImage,
+  dxLayoutLookAndFeels;
 
 type
   TFMain = class(TdxRibbonForm)
@@ -42,10 +44,24 @@ type
     dxRibbonBackstageViewGalleryControl1Group1Item1: TdxRibbonBackstageViewGalleryItem;
     dxBarManager1Bar2: TdxBar;
     cxBarEditItem1: TcxBarEditItem;
+    dxRibbon1Tab2: TdxRibbonTab;
     dxBarManager1Bar3: TdxBar;
     dxBarLargeButton1: TdxBarLargeButton;
+    dxBarLargeButton2: TdxBarLargeButton;
+    dxBarLargeButton3: TdxBarLargeButton;
+    dxBarManager1Bar4: TdxBar;
+    dxBarLargeButton4: TdxBarLargeButton;
+    dxBarLargeButton5: TdxBarLargeButton;
+    dxBarLargeButton6: TdxBarLargeButton;
+    dxBarManager1Bar5: TdxBar;
+    dxBarLargeButton7: TdxBarLargeButton;
+    dxBarLargeButton8: TdxBarLargeButton;
+    dxBarLargeButton9: TdxBarLargeButton;
+    VirtualImage2: TVirtualImage;
     procedure FormCreate(Sender: TObject);
     procedure dxBarLargeButton1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure dxBarLargeButton9Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -54,6 +70,7 @@ type
 
 var
   FMain: TFMain;
+  AuthFrm : TFrmAuth;
 
 implementation
 
@@ -61,17 +78,77 @@ implementation
 
 { TForm1 }
 
-Uses U_Comptes;
-
-
 procedure TFMain.dxBarLargeButton1Click(Sender: TObject);
+
 begin
- Form1.ShowModal;
+  AuthFrm.Free;
+  // Authentification
+  AuthFrm:= TFrmAuth.Create(FMain);
+  AuthFrm.Parent := FMain;
+  AuthFrm.Align := alClient;
+  AuthFrm.Visible := True;
+  dxRibbon1.Visible := False;
+end;
+
+procedure TFMain.dxBarLargeButton9Click(Sender: TObject);
+var
+  ChildForm: TForm;
+  FormExists: Boolean;
+  i: Integer;
+begin
+  FormExists := False;
+
+  // Vérifier si un ChildForm existe déjà
+  for i := 0 to Self.MDIChildCount - 1 do
+  begin
+    ChildForm := Self.MDIChildren[i];  // Accéder à chaque enfant MDI
+    if ChildForm.Caption = 'Coffre' then
+    begin
+      FormExists := True;
+      // Si le formulaire existe, le rendre actif
+      ChildForm.BringToFront;
+      Break;
+    end;
+  end;
+
+  // Si le ChildForm n'existe pas, le créer
+  if not FormExists then
+  begin
+    // Créer le ChildForm
+    ChildForm := TFCoffre.Create(Self);
+    try
+      ChildForm.Position := poScreenCenter;
+      ChildForm.FormStyle := fsMDIChild;
+      ChildForm.WindowState := TWindowState.wsMaximized;
+      // Associer l'événement OnClose pour fermer le ChildForm
+      //ChildForm.OnClose := ChildFormClose;
+      {ChildForm.OnCloseQuery := CreateMessageDialog();}
+      // Afficher le ChildForm
+      ChildForm.Show;
+    except
+      ChildForm.Free;
+      raise;
+    end;
+  end;
+
 end;
 
 procedure TFMain.FormCreate(Sender: TObject);
+
 begin
   DisableAero := True;
+  dxRibbon1.Visible := False;
+  dxRibbon1.ColorSchemeName := dxSkinController1.SkinName;
+end;
+
+procedure TFMain.FormShow(Sender: TObject);
+begin
+  // Authentification
+  AuthFrm:= TFrmAuth.Create(FMain);
+  AuthFrm.Parent := FMain;
+  AuthFrm.Align := alClient;
+  AuthFrm.Visible := True;
+  // Cache Copo
 end;
 
 end.

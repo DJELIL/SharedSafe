@@ -1,13 +1,13 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
-        <ProjectGuid>{7828FF7D-3B6B-4545-93C0-35505DD3226C}</ProjectGuid>
+        <ProjectGuid>{6FC55017-221C-4A20-ACD3-1887DE98AB5F}</ProjectGuid>
         <ProjectVersion>20.3</ProjectVersion>
         <FrameworkType>VCL</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
         <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <ProjectName Condition="'$(ProjectName)'==''">SharedSafe</ProjectName>
-        <TargetedPlatforms>3</TargetedPlatforms>
+        <TargetedPlatforms>1</TargetedPlatforms>
         <AppType>Application</AppType>
         <MainSource>SharedSafe.dpr</MainSource>
     </PropertyGroup>
@@ -70,12 +70,6 @@
         <Cfg_1>true</Cfg_1>
         <Base>true</Base>
     </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win64)'!=''">
-        <Cfg_1_Win64>true</Cfg_1_Win64>
-        <CfgParent>Cfg_1</CfgParent>
-        <Cfg_1>true</Cfg_1>
-        <Base>true</Base>
-    </PropertyGroup>
     <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
         <Cfg_2>true</Cfg_2>
         <CfgParent>Base</CfgParent>
@@ -83,12 +77,6 @@
     </PropertyGroup>
     <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
         <Cfg_2_Win32>true</Cfg_2_Win32>
-        <CfgParent>Cfg_2</CfgParent>
-        <Cfg_2>true</Cfg_2>
-        <Base>true</Base>
-    </PropertyGroup>
-    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win64)'!=''">
-        <Cfg_2_Win64>true</Cfg_2_Win64>
         <CfgParent>Cfg_2</CfgParent>
         <Cfg_2>true</Cfg_2>
         <Base>true</Base>
@@ -140,12 +128,6 @@
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win64)'!=''">
         <DCC_UsePackage>dxPScxExtCommonRS29;dxRichEditControlCoreRS29;vclie;bindengine;IndyIPCommon;FMXfrCoreLibrary29;cxVerticalGridRS29;dbxcds;vcledge;dxPSDBTeeChartRS29;cxSchedulerWebServiceStorageRS29;dxRichEditControlRS29;dxPsPrVwAdvRS29;dxPSdxGaugeControlLnkRS29;dxRibbonCustomizationFormRS29;dbexpress;dxEMFRS29;inet;PythonVcl;vcltouch;dxPSdxFCLnkRS29;FireDACDBXDriver;dxSpreadSheetCoreConditionalFormattingDialogsRS29;CustomIPTransport;FireDACMSSQLDriver;EssentialsDR;dxPScxTLLnkRS29;frxe29;EsVclCore;vclFireDAC;dxSpreadSheetRS29;FireDACODBCDriver;emsserverresource;dxPScxVGridLnkRS29;rtl;dxServerModeRS29;DBXSqliteDriver;dxBarDBNavRS29;DBXSybaseASEDriver;inetdbxpress;FireDAC;xmlrtl;P4DEnvironment;ibxpress;dsnap;FireDACDb2Driver;dxPSdxLCLnkRS29;DBXOracleDriver;vclib;DatasnapConnectorsFreePascal;dxPSLnksRS29;dxPSdxOCLnkRS29;cxSchedulerGridRS29;dxPSdxDBTVLnkRS29;frLocalizationLibrary29;dxGaugeControlRS29;bindcompvclwinx;dxOrgChartAdvancedCustomizeFormRS29;bindcompfmx;TMSVCLUIPackPkgExDXE15;dxFlowChartLayoutsRS29;dxdborRS29;ibmonitor;FireDACASADriver;Tee;dxPScxGridLnkRS29;vclactnband;TMSVCLUIPackPkgXlsDXE15;FMXfrxDB29;FireDACInfxDriver;dxRichEditCoreRS29;DBXMySQLDriver;dxFlowChartAdvancedCustomizeFormRS29;VclSmp;DataSnapCommon;dxPSTeeChartRS29;fmxase;dxFlowChartRS29;cxGridRS29;dxSpellCheckerRS29;DataSnapIndy10ServerTransport;dxMapControlRS29;vcldsnap;DBXInterBaseDriver;RadiantShapesFmx;vcldb;cxSchedulerTreeBrowserRS29;dxTabbedMDIRS29;inetstn;dxHttpIndyRequestRS29;FMXfrx29;cxPivotGridOLAPRS29;RaizeComponentsVclDb;WclBluetoothFrameworkR;vcl;DataSnapClient;dxCoreRS29;TaurusTLS_RT;dxSkinsCoreRS29;emsclientfiredac;FireDACPgDriver;FireDACDSDriver;tethering;bindcompvcl;CloudService;PythonFmx;FMXfrLocalizationLibrary29;cxSchedulerRS29;RaizeComponentsVcl;dxPScxCommonRS29;soapserver;FireDACIBDriver;dxRibbonRS29;vclwinx;DataSnapServer;fmx;dxSpreadSheetReportDesignerRS29;DbxCommonDriver;VCLRESTComponents;FireDACCommonODBC;DBXMSSQLDriver;dxComnRS29;emsclient;dxFlowChartDesignerRS29;FrameStandPackage_11_1;appanalytics;IndyProtocols;vclx;dxBarExtDBItemsRS29;cxFireDACAdaptersRS29;DBXFirebirdDriver;FireDACSqliteDriver;DbxClientDriver;soapmidas;frCoreLibrary29;Python;dxDockingRS29;AsyncProDR;dxorgcRS29;fmxdae;dxPSRichEditControlLnkRS29;dxPSdxSpreadSheetLnkRS29;cxADOAdaptersRS29;dxPSPrVwRibbonRS29;IndySystem;dxPSdxDBOCLnkRS29;dxGDIPlusRS29;ibxbindings;dxPSCoreRS29;FireDACCommon;DataSnapServerMidas;dxPSdxMapControlLnkRS29;cxGridEMFRS29;dxGanttControlRS29;DOSCommandDR;dxPScxPivotGridLnkRS29;dxADOServerModeRS29;dxWizardControlRS29;bindcompdbx;FireDACMySQLDriver;dxCloudServiceLibraryRS29;cxIBXAdaptersRS29;TMSVCLUIPackPkgDXE15;dxSpreadSheetCoreRS29;dxNavBarRS29;vclimg;DataSnapFireDAC;dxFireDACEMFRS29;DBXInformixDriver;fmxobj;bindcompvclsmp;DataSnapNativeClient;frx29;dxmdsRS29;dxPScxSchedulerLnkRS29;emshosting;dxADOEMFRS29;dxChartControlRS29;frxDB29;FireDACCommonDriver;RadiantShapesFmx_Design;IndyIPClient;dxPDFViewerRS29;EsVclComponents;emsedge;dxBarExtItemsRS29;inetdb;OrpheusDBDR;cxPivotGridChartRS29;fmxFireDAC;cxTreeListdxBarPopupMenuRS29;EsCore;cxSchedulerRibbonStyleEventEditorRS29;dxtrmdRS29;DBXOdbcDriver;dbrtl;dxPScxPCProdRS29;FireDACOracleDriver;ComPortDrv;TeeDB;FireDACMSAccDriver;AbbreviaVCLD;dxRichEditDocumentModelRS29;DataSnapConnectors;FireDACMongoDBDriver;PngComponentsD;OrpheusDR;FireDACTDataDriver;cxLibraryRS29;Skia.Package.VCL;IconFontsImageList;SynEditDR;dxPSdxPDFViewerLnkRS29;bindcomp;cxExportRS29;IndyCore;RESTBackendComponents;dxTileControlRS29;dxFireDACServerModeRS29;FireDACADSDriver;RESTComponents;IndyIPServer;dsnapxml;adortl;dxdbtrRS29;dsnapcon;cxPivotGridRS29;DataSnapProviderClient;DBXDb2Driver;dxBarRS29;DBXSybaseASADriver;dxSpreadSheetConditionalFormattingDialogsRS29;cxTreeListRS29;IconFontsImageListFMX;soaprtl;dxDBXServerModeRS29;$(DCC_UsePackage)</DCC_UsePackage>
-        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
-        <BT_BuildType>Debug</BT_BuildType>
-        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
-        <VerInfo_Keys>CompanyName=;FileDescription=$(MSBuildProjectName);FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProgramID=com.embarcadero.$(MSBuildProjectName);ProductName=$(MSBuildProjectName);ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
-        <VerInfo_Locale>1033</VerInfo_Locale>
-        <Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_1)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
@@ -164,9 +146,6 @@
         <VerInfo_Locale>1033</VerInfo_Locale>
         <Icon_MainIcon>SharedSafe_Icon.ico</Icon_MainIcon>
     </PropertyGroup>
-    <PropertyGroup Condition="'$(Cfg_1_Win64)'!=''">
-        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-    </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
         <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
@@ -174,9 +153,6 @@
         <DCC_DebugInformation>0</DCC_DebugInformation>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
-        <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Cfg_2_Win64)'!=''">
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <ItemGroup>
@@ -187,14 +163,19 @@
             <Form>FMain</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="U_Comptes.pas">
-            <Form>Form1</Form>
+        <DCCReference Include="UAuthentification.pas">
+            <Form>FrmAuth</Form>
             <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
         </DCCReference>
         <DCCReference Include="UDM.pas">
             <Form>DM</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="UCoffre.pas">
+            <Form>FCoffre</Form>
+            <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
@@ -222,7 +203,7 @@
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k290.bpl">Composants Microsoft Office 2000 Sample Automation Server Wrapper</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp290.bpl">Composants Microsoft Office XP Sample Automation Server Wrapper</Excluded_Packages>
                     <Excluded_Packages Name="C:\Users\J\Documents\Embarcadero\Studio\23.0\CatalogRepository\TeeChart Pro VCL-FMX v.2023.38 Source Code support Delphi 12\Source\..\Compiled\Delphi29.win32\Bin\DclTeePro929.bpl">TeeChart Pro 2023 VCL Components</Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\J\Documents\Embarcadero\Studio\23.0\CatalogRepository\TeeChart Pro VCL-FMX v.2023.38 Source Code support Delphi 12\Source\..\Compiled\Delphi29.win32\Bin\DclTeeMaker129.bpl">TeeMaker </Excluded_Packages>
+                    <Excluded_Packages Name="C:\Users\J\Documents\Embarcadero\Studio\23.0\CatalogRepository\TeeChart Pro VCL-FMX v.2023.38 Source Code support Delphi 12\Source\..\Compiled\Delphi29.win32\Bin\DclTeeMaker129.bpl">TeeMaker</Excluded_Packages>
                     <Excluded_Packages Name="C:\Users\J\Documents\Embarcadero\Studio\23.0\CatalogRepository\TeeChart Pro VCL-FMX v.2023.38 Source Code support Delphi 12\Source\..\TeeTree\Compiled\Delphi29.win32\Bin\DclTree2D29Tee9.bpl">TeeTree 2 Components</Excluded_Packages>
                     <Excluded_Packages Name="C:\Users\J\Documents\Embarcadero\Studio\23.0\CatalogRepository\TeeChart Pro VCL-FMX v.2023.38 Source Code support Delphi 12\Source\..\TeeTree\Compiled\Delphi29.win32\Bin\DclFMXTree29.bpl">TeeTree for FireMonkey</Excluded_Packages>
                 </Excluded_Packages>
@@ -1194,8 +1175,9 @@
                 <Platform value="OSX64">False</Platform>
                 <Platform value="OSXARM64">False</Platform>
                 <Platform value="Win32">True</Platform>
-                <Platform value="Win64">True</Platform>
+                <Platform value="Win64">False</Platform>
             </Platforms>
+            <ModelSupport>False</ModelSupport>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>
